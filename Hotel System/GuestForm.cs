@@ -16,5 +16,25 @@ namespace Hotel_System
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button_clean_Click(object sender, EventArgs e)
+        {
+            textBox_id.Clear();
+            textBox_fName.Clear();
+            textBox_lName.Clear();
+            textBox_phone.Clear();
+            textBox_city.Clear();
+
+        }
     }
 }
