@@ -63,9 +63,39 @@ namespace Hotel_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap available_updates_40px {
+            get {
+                object obj = ResourceManager.GetObject("available_updates_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clear_formatting_40px {
+            get {
+                object obj = ResourceManager.GetObject("clear_formatting_40px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap customer_registration {
             get {
                 object obj = ResourceManager.GetObject("customer registration", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_document_40px {
+            get {
+                object obj = ResourceManager.GetObject("delete_document_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +196,16 @@ namespace Hotel_System.Properties {
         internal static System.Drawing.Bitmap room1 {
             get {
                 object obj = ResourceManager.GetObject("room1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_40px {
+            get {
+                object obj = ResourceManager.GetObject("save_40px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

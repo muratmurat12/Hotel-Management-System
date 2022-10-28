@@ -21,7 +21,14 @@ namespace Hotel_System
         {
             panel_slide.Height = button_guest.Height; 
             panel_slide.Top = button_guest.Top;
-            
+
+            panel1.Controls.Clear();
+            GuestForm guestForm = new GuestForm();
+            guestForm.TopLevel=false;
+              guestForm.Dock = DockStyle.Fill;
+            guestForm.FormBorderStyle = FormBorderStyle.None;
+            panel1.Controls.Add(guestForm);
+            guestForm.Show();
         }
 
         private void button_dashboard_Click(object sender, EventArgs e)
