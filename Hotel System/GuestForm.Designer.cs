@@ -47,11 +47,11 @@
             this.button_delete = new System.Windows.Forms.Button();
             this.button_save = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView_guest = new System.Windows.Forms.DataGridView();
             this.panel_button.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_guest)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_button
@@ -161,7 +161,7 @@
             this.label_exit.AutoSize = true;
             this.label_exit.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_exit.ForeColor = System.Drawing.Color.White;
-            this.label_exit.Location = new System.Drawing.Point(911, 1);
+            this.label_exit.Location = new System.Drawing.Point(908, 0);
             this.label_exit.Name = "label_exit";
             this.label_exit.Size = new System.Drawing.Size(42, 38);
             this.label_exit.TabIndex = 2;
@@ -180,10 +180,10 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Location = new System.Drawing.Point(0, 79);
+            this.panel2.Controls.Add(this.dataGridView_guest);
+            this.panel2.Location = new System.Drawing.Point(12, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(950, 308);
+            this.panel2.Size = new System.Drawing.Size(917, 308);
             this.panel2.TabIndex = 22;
             // 
             // button_clean
@@ -229,6 +229,7 @@
             this.button_save.Text = "Save";
             this.button_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_save.UseVisualStyleBackColor = false;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_update
             // 
@@ -244,18 +245,29 @@
             this.button_update.Text = "Update";
             this.button_update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_update.UseVisualStyleBackColor = false;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
-            // dataGridView1
+            // dataGridView_guest
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(950, 308);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView_guest.AllowUserToAddRows = false;
+            this.dataGridView_guest.AllowUserToDeleteRows = false;
+            this.dataGridView_guest.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_guest.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_guest.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView_guest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView_guest.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_guest.EnableHeadersVisualStyles = false;
+            this.dataGridView_guest.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView_guest.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_guest.Name = "dataGridView_guest";
+            this.dataGridView_guest.ReadOnly = true;
+            this.dataGridView_guest.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGridView_guest.RowHeadersWidth = 51;
+            this.dataGridView_guest.RowTemplate.Height = 24;
+            this.dataGridView_guest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView_guest.Size = new System.Drawing.Size(917, 308);
+            this.dataGridView_guest.TabIndex = 0;
+            this.dataGridView_guest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_guest_CellContentClick);
             // 
             // GuestForm
             // 
@@ -282,11 +294,12 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GuestForm";
             this.Text = "GuestForm";
+            this.Load += new System.EventHandler(this.GuestForm_Load);
             this.panel_button.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_guest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,6 +326,6 @@
         private System.Windows.Forms.Label label_exit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView_guest;
     }
 }

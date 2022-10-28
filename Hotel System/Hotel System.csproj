@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="GuestClass.cs" />
     <Compile Include="GuestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +127,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout_rounded_left_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_document_40px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_formatting_40px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
