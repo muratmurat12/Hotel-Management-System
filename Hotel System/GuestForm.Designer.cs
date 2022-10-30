@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel_button = new System.Windows.Forms.Panel();
+            this.button_clean = new System.Windows.Forms.Button();
+            this.button_delete = new System.Windows.Forms.Button();
+            this.button_save = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox_city = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,10 +47,6 @@
             this.label_exit = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button_clean = new System.Windows.Forms.Button();
-            this.button_delete = new System.Windows.Forms.Button();
-            this.button_save = new System.Windows.Forms.Button();
-            this.button_update = new System.Windows.Forms.Button();
             this.dataGridView_guest = new System.Windows.Forms.DataGridView();
             this.panel_button.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,6 +65,68 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(950, 128);
             this.panel_button.TabIndex = 0;
+            // 
+            // button_clean
+            // 
+            this.button_clean.FlatAppearance.BorderSize = 0;
+            this.button_clean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_clean.ForeColor = System.Drawing.Color.White;
+            this.button_clean.Image = global::Hotel_System.Properties.Resources.clear_formatting_40px;
+            this.button_clean.Location = new System.Drawing.Point(579, 19);
+            this.button_clean.Name = "button_clean";
+            this.button_clean.Size = new System.Drawing.Size(105, 78);
+            this.button_clean.TabIndex = 9;
+            this.button_clean.Text = "Clean";
+            this.button_clean.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_clean.UseVisualStyleBackColor = true;
+            this.button_clean.Click += new System.EventHandler(this.button_clean_Click);
+            // 
+            // button_delete
+            // 
+            this.button_delete.FlatAppearance.BorderSize = 0;
+            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_delete.ForeColor = System.Drawing.Color.White;
+            this.button_delete.Image = global::Hotel_System.Properties.Resources.delete_document_40px;
+            this.button_delete.Location = new System.Drawing.Point(468, 19);
+            this.button_delete.Name = "button_delete";
+            this.button_delete.Size = new System.Drawing.Size(105, 78);
+            this.button_delete.TabIndex = 8;
+            this.button_delete.Text = "Delete";
+            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_delete.UseVisualStyleBackColor = true;
+            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
+            // 
+            // button_save
+            // 
+            this.button_save.BackColor = System.Drawing.Color.Black;
+            this.button_save.FlatAppearance.BorderSize = 0;
+            this.button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_save.ForeColor = System.Drawing.Color.White;
+            this.button_save.Image = global::Hotel_System.Properties.Resources.save_40px;
+            this.button_save.Location = new System.Drawing.Point(247, 19);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(105, 78);
+            this.button_save.TabIndex = 6;
+            this.button_save.Text = "Save";
+            this.button_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_save.UseVisualStyleBackColor = false;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            // 
+            // button_update
+            // 
+            this.button_update.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button_update.FlatAppearance.BorderSize = 0;
+            this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_update.ForeColor = System.Drawing.Color.White;
+            this.button_update.Image = global::Hotel_System.Properties.Resources.available_updates_40px;
+            this.button_update.Location = new System.Drawing.Point(357, 19);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(105, 78);
+            this.button_update.TabIndex = 7;
+            this.button_update.Text = "Update";
+            this.button_update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_update.UseVisualStyleBackColor = false;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // label5
             // 
@@ -136,6 +198,7 @@
             this.textBox_id.Name = "textBox_id";
             this.textBox_id.Size = new System.Drawing.Size(141, 32);
             this.textBox_id.TabIndex = 11;
+            this.textBox_id.TextChanged += new System.EventHandler(this.textBox_id_TextChanged);
             // 
             // label1
             // 
@@ -186,67 +249,6 @@
             this.panel2.Size = new System.Drawing.Size(917, 308);
             this.panel2.TabIndex = 22;
             // 
-            // button_clean
-            // 
-            this.button_clean.FlatAppearance.BorderSize = 0;
-            this.button_clean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_clean.ForeColor = System.Drawing.Color.White;
-            this.button_clean.Image = global::Hotel_System.Properties.Resources.clear_formatting_40px;
-            this.button_clean.Location = new System.Drawing.Point(579, 19);
-            this.button_clean.Name = "button_clean";
-            this.button_clean.Size = new System.Drawing.Size(105, 78);
-            this.button_clean.TabIndex = 9;
-            this.button_clean.Text = "Clean";
-            this.button_clean.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_clean.UseVisualStyleBackColor = true;
-            this.button_clean.Click += new System.EventHandler(this.button_clean_Click);
-            // 
-            // button_delete
-            // 
-            this.button_delete.FlatAppearance.BorderSize = 0;
-            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_delete.ForeColor = System.Drawing.Color.White;
-            this.button_delete.Image = global::Hotel_System.Properties.Resources.delete_document_40px;
-            this.button_delete.Location = new System.Drawing.Point(468, 19);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(105, 78);
-            this.button_delete.TabIndex = 8;
-            this.button_delete.Text = "Delete";
-            this.button_delete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_delete.UseVisualStyleBackColor = true;
-            // 
-            // button_save
-            // 
-            this.button_save.BackColor = System.Drawing.Color.Black;
-            this.button_save.FlatAppearance.BorderSize = 0;
-            this.button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_save.ForeColor = System.Drawing.Color.White;
-            this.button_save.Image = global::Hotel_System.Properties.Resources.save_40px;
-            this.button_save.Location = new System.Drawing.Point(247, 19);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(105, 78);
-            this.button_save.TabIndex = 6;
-            this.button_save.Text = "Save";
-            this.button_save.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_save.UseVisualStyleBackColor = false;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
-            // 
-            // button_update
-            // 
-            this.button_update.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button_update.FlatAppearance.BorderSize = 0;
-            this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_update.ForeColor = System.Drawing.Color.White;
-            this.button_update.Image = global::Hotel_System.Properties.Resources.available_updates_40px;
-            this.button_update.Location = new System.Drawing.Point(357, 19);
-            this.button_update.Name = "button_update";
-            this.button_update.Size = new System.Drawing.Size(105, 78);
-            this.button_update.TabIndex = 7;
-            this.button_update.Text = "Update";
-            this.button_update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_update.UseVisualStyleBackColor = false;
-            this.button_update.Click += new System.EventHandler(this.button_update_Click);
-            // 
             // dataGridView_guest
             // 
             this.dataGridView_guest.AllowUserToAddRows = false;
@@ -255,6 +257,7 @@
             this.dataGridView_guest.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView_guest.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridView_guest.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView_guest.ColumnHeadersHeight = 29;
             this.dataGridView_guest.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_guest.EnableHeadersVisualStyles = false;
             this.dataGridView_guest.GridColor = System.Drawing.SystemColors.ActiveCaption;
@@ -291,7 +294,7 @@
             this.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GuestForm";
             this.Text = "GuestForm";
             this.Load += new System.EventHandler(this.GuestForm_Load);

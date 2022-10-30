@@ -76,6 +76,28 @@ namespace Hotel_System
 
         }
 
+        // create a function to delete the selected guest
+        // we only need the guest id
 
+        public bool removeGuest(string id)
+        {
+            string insertQuerry = "DELETE FROM `guest` WHERE `GuestId`=@id";
+            MySqlCommand command = new MySqlCommand(insertQuerry, connect.GetConnection());
+            //@id
+            command.Parameters.Add("@id", MySqlDbType.VarChar).Value = id;
+            connect.OpenCon();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connect.CloseCon();
+                return true;
+            }
+            else
+            {
+                connect.CloseCon();
+                return false;
+            }
+
+        }
+
+        }
     }
-}

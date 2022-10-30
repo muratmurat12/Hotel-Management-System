@@ -127,5 +127,42 @@ namespace Hotel_System
             textBox_phone.Text = dataGridView_guest.CurrentRow.Cells[3].Value.ToString();
             textBox_city.Text = dataGridView_guest.CurrentRow.Cells[4].Value.ToString();
         }
+
+        private void textBox_id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            if (textBox_id.Text == "")
+            {
+                MessageBox.Show("Required Field - Id no", "Required Field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    string id = textBox_id.Text;
+                    Boolean deleteGuest = guest.removeGuest(id);
+                    if (deleteGuest)
+                    {
+                        MessageBox.Show("guest data remove successfuly", "Guest Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        getTable();
+                        // you can clear all text after the delete action
+                        button_clean.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR - guest not Remove", "Error delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
     }
 }
