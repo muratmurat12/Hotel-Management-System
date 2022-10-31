@@ -30,7 +30,6 @@
         {
             this.radioButton_busy = new System.Windows.Forms.RadioButton();
             this.comboBox_roomType = new System.Windows.Forms.ComboBox();
-            this.button_add = new System.Windows.Forms.Button();
             this.radioButton_free = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView_room = new System.Windows.Forms.DataGridView();
@@ -47,6 +46,7 @@
             this.button_delete = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
             this.panel_button = new System.Windows.Forms.Panel();
+            this.button_add = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_room)).BeginInit();
             this.panel1.SuspendLayout();
@@ -71,20 +71,6 @@
             this.comboBox_roomType.Name = "comboBox_roomType";
             this.comboBox_roomType.Size = new System.Drawing.Size(141, 31);
             this.comboBox_roomType.TabIndex = 38;
-            // 
-            // button_add
-            // 
-            this.button_add.BackColor = System.Drawing.Color.Black;
-            this.button_add.FlatAppearance.BorderSize = 0;
-            this.button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_add.ForeColor = System.Drawing.Color.White;
-            this.button_add.Location = new System.Drawing.Point(283, 3);
-            this.button_add.Name = "button_add";
-            this.button_add.Size = new System.Drawing.Size(105, 78);
-            this.button_add.TabIndex = 2;
-            this.button_add.Text = "Add";
-            this.button_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button_add.UseVisualStyleBackColor = false;
             // 
             // radioButton_free
             // 
@@ -174,6 +160,7 @@
             this.button_clean.Text = "Clean";
             this.button_clean.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_clean.UseVisualStyleBackColor = true;
+            this.button_clean.Click += new System.EventHandler(this.button_clean_Click);
             // 
             // label3
             // 
@@ -243,6 +230,7 @@
             this.button_update.Text = "Update";
             this.button_update.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_update.UseVisualStyleBackColor = false;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
             // panel_button
             // 
@@ -255,6 +243,22 @@
             this.panel_button.Name = "panel_button";
             this.panel_button.Size = new System.Drawing.Size(940, 108);
             this.panel_button.TabIndex = 29;
+            // 
+            // button_add
+            // 
+            this.button_add.BackColor = System.Drawing.Color.Black;
+            this.button_add.FlatAppearance.BorderSize = 0;
+            this.button_add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_add.ForeColor = System.Drawing.Color.White;
+            this.button_add.Image = global::Hotel_System.Properties.Resources.save_40px1;
+            this.button_add.Location = new System.Drawing.Point(283, 3);
+            this.button_add.Name = "button_add";
+            this.button_add.Size = new System.Drawing.Size(105, 78);
+            this.button_add.TabIndex = 2;
+            this.button_add.Text = "Add";
+            this.button_add.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button_add.UseVisualStyleBackColor = false;
+            this.button_add.Click += new System.EventHandler(this.button_add_Click);
             // 
             // RoomForm
             // 

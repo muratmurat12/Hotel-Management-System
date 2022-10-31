@@ -150,5 +150,8 @@
   <ItemGroup>
     <None Include="Resources\clear_formatting_40px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_40px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
