@@ -32,7 +32,19 @@ namespace Hotel_System
 
         private void dataGridView_room_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            textBox_id.Text = dataGridView_room.CurrentRow.Cells[0].Value.ToString();
+            comboBox_roomType.SelectedValue = dataGridView_room.CurrentRow.Cells[1].Value.ToString();
+            textBox_phone.Text = dataGridView_room.CurrentRow.Cells[2].Value.ToString();
+            //for radio button
+            string rButton = dataGridView_room.CurrentRow.Cells[3].Value.ToString();
+            if (rButton.Equals("Free"))
+            {
+                radioButton_free.Checked = true;
+            }
+            else
+            {
+                radioButton_busy.Checked = true;
+            }
         }
 
         private void RoomForm_Load(object sender, EventArgs e)

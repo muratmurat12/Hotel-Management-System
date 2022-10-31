@@ -44,6 +44,8 @@ namespace Hotel_System
         {
             panel_slide.Height = button_reception.Height;
             panel_slide.Top = button_reception.Top;
+
+
         }
 
         private void button_room_Click(object sender, EventArgs e)
@@ -64,6 +66,10 @@ namespace Hotel_System
         {
             panel_slide.Height = button_logout.Height;
             panel_slide.Top = button_logout.Top;
+
+            LoginForm login = new LoginForm();
+            this.Hide();
+            login.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
