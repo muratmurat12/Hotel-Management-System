@@ -164,5 +164,10 @@ namespace Hotel_System
 
             }
         }
+
+        private void label_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
