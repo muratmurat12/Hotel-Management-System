@@ -113,5 +113,37 @@ namespace Hotel_System
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button_delete_Click(object sender, EventArgs e)
+        {
+            if (textBox_id.Text == "")
+            {
+                MessageBox.Show("Required Field - Room No", "Required Field", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    string id = textBox_id.Text;
+                    Boolean deleteGuest = room.removeRoom(id);
+                    if (deleteGuest)
+                    {
+                        MessageBox.Show("Room remove successfuly", "Room Removed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        getRoomList();
+                        // you can clear all text after the delete action
+                        button_clean.PerformClick();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR - room not Remove", "Error delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+        }
     }
 }
