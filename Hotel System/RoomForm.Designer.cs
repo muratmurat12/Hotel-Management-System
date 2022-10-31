@@ -95,11 +95,17 @@
             // 
             this.dataGridView_room.AllowUserToAddRows = false;
             this.dataGridView_room.AllowUserToDeleteRows = false;
-            this.dataGridView_room.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_room.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_room.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView_room.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView_room.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView_room.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView_room.EnableHeadersVisualStyles = false;
+            this.dataGridView_room.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView_room.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_room.Name = "dataGridView_room";
             this.dataGridView_room.ReadOnly = true;
+            this.dataGridView_room.RowHeadersVisible = false;
             this.dataGridView_room.RowHeadersWidth = 51;
             this.dataGridView_room.RowTemplate.Height = 24;
             this.dataGridView_room.Size = new System.Drawing.Size(916, 301);

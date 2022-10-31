@@ -53,12 +53,12 @@ namespace Hotel_System
             panel_slide.Height = button_room.Height;
             panel_slide.Top = button_room.Top;
 
-            panel_main.Controls.Clear();
+            panel_cover.Controls.Clear();
             RoomForm room = new RoomForm();
             room.TopLevel = false;
             room.Dock = DockStyle.Fill;
             room.FormBorderStyle = FormBorderStyle.None;
-            panel_main.Controls.Add(room);
+            panel_cover.Controls.Add(room);
             room.Show();
         }
 
