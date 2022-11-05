@@ -45,6 +45,14 @@ namespace Hotel_System
             panel_slide.Height = button_reception.Height;
             panel_slide.Top = button_reception.Top;
 
+            panel_cover.Controls.Clear();
+            ReservationForm reservation = new ReservationForm();
+            reservation.TopLevel = false;
+            reservation.Dock = DockStyle.Fill;
+            reservation.FormBorderStyle = FormBorderStyle.None;
+            panel_cover.Controls.Add(reservation);
+            reservation.Show();
+
 
         }
 
